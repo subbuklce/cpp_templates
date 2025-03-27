@@ -12,3 +12,10 @@ template <typename U, typename V>
 std::common_type_t<U,V> area_double(U a, V b) {               // Type Traits.
     return a*b;
 }
+
+/*
+template <typename U, typename V, typename ResultType=std::common_type_t<U,V>>
+ area_double(U a, V b) {               // Type Traits.
+    return a*b;
+}
+*/

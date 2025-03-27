@@ -1,0 +1,21 @@
+# sending const value to a template function
+template < auto Value>
+void square(){
+    std::cout<<Value;
+}
+#calls
+square<2>(); // it will create a new instantiation, name mangling contains value as well
+square<5>(); // it will also create a new instantiation
+square<12u>(); // new instantiation creates
+
+# Advantages of using template reference
+It does not require to be mentioned explicitly
+template<typename T, size_t size>
+void find(const T (&ArgName)[size]);
+usage:
+ int a[] = {1,2,3,4,5};
+ find(a); - so size is implicitly carried to template with reference
+ 
+
+Max int Value
+ std::numeric_limits<size_t>::max() - returns max int value
