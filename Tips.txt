@@ -19,3 +19,16 @@ usage:
 
 Max int Value
  std::numeric_limits<size_t>::max() - returns max int value
+
+ Templates can be overloaded and they can be overloaded with normal functions as well
+ T* Max(T* a, T* b);
+ T Max(T a, T b);
+ char* Max(char* a, char* b);
+
+Explicit Template specialization:
+ Explicit template specializations do not participate in template overloading,
+ the order of template creation with specialization template function is very important
+ check template_specialization example for clarity
+ Notes: Do not prefer it generally, non template functions are far better in that need.
+        Generally in recursive functions use this much.
+
