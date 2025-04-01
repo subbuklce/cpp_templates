@@ -4,17 +4,18 @@ template<typename T>
 T Max(T a, T b) {
     return (a > b) ? a : b;
 }
-template<>
-char* Max(char* a, char* b) {
-    std::cout << "Specialized version for char*" << std::endl;
-    return (strcmp(a, b) > 0) ? a : b;
-}
+
+
 template<typename T>
 T* Max(T* a, T* b) {
     std::cout << "Specialized version for pointers" << std::endl;
     return (*a > *b) ? a : b;
 }
-
+template<>
+char* Max(char* a, char* b) {
+    std::cout << "Specialized version for char*" << std::endl;
+    return (strcmp(a, b) > 0) ? a : b;
+}
 
 
 //Notes 

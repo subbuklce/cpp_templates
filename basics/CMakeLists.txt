@@ -10,6 +10,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED True)
  # Manually list all source files
 set(SRC_FILES
     src/utils.cpp
+    src/explicit_temp_instantions.cpp
 )
 
 # Add the executable
